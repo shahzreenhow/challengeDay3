@@ -15,7 +15,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 position: relative;
-                /* margin-top: 80px; */
+                overflow: hidden;
             }
 
             div#header {
@@ -36,6 +36,7 @@
                 left: 300px;
                 transform: rotate(45deg);
                 z-index: 2;
+                border-style: none;
                 }
 
                 .hexagon2 {
@@ -51,21 +52,39 @@
 
                 .hexagon3 {
                 position: absolute;
-                width: 302px; 
-                height: 343.21px;
-                background-color: yellow;
-                margin: 86.60px 0;
-                top: -94px;
-                left: 541px;
-                transform: rotate(45deg);
+                width: 400px; 
+                height: 230.94px;
+                background-color: #ffee00;
+                margin: 115.47px 0;
+                left: 497px;
+                top: -24px;
+                transform: rotate(41deg);
+                }
+
+                .hexagon3:before,
+                .hexagon3:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                border-left: 200px solid transparent;
+                border-right: 200px solid transparent;
+                }
+
+                .hexagon3:before {
+                bottom: 100%;
+                border-bottom: 115.47px solid #ffee00;
+                }
+
+                .hexagon3:after {
+                top: 100%;
+                width: 0;
+                border-top: 115.47px solid #ffee00;
                 }
 
                 .hexagon1:before,
                 .hexagon1:after,
                 .hexagon2:before,
-                .hexagon2:after,
-                .hexagon3:before,
-                .hexagon3:after {
+                .hexagon2:after {
                 content: "";
                 position: absolute;
                 width: 0;
@@ -74,8 +93,7 @@
                 }
 
                 .hexagon1:before,
-                .hexagon2:before,
-                .hexagon3:before {
+                .hexagon2:before {
                 bottom: 100%;
                 border-bottom: 86.60px solid white;
                 }
@@ -85,12 +103,6 @@
                 top: 100%;
                 width: 0;
                 border-top: 86.60px solid white;
-                }
-
-                .hexagon3:after {
-                top: 100%;
-                width: 0;
-                border-top: 86.60px solid yellow;
                 }
 
                 .image {
